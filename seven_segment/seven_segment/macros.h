@@ -11,9 +11,10 @@
 
 #define registersize	8
 #define setbit(reg,bit)		reg|=1<<bit
-#define setport(reg,val)		reg|=val
+#define setport(reg)		reg=0xFF
+#define portval(reg,val)	reg=val
 #define clearbit(reg,bit)	reg&=~(1<<bit)
-#define clearport(reg)		reg&=0x00
+#define clearport(reg)		reg=0x00
 #define togglebit(reg,bit)	reg^=1<<bit
 #define toggleport(reg)		reg^=0xFF
 #define readbit(reg,bit)	(reg>>bit)&1

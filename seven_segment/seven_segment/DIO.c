@@ -62,41 +62,41 @@ void dio_setportdirection(unsigned char port,unsigned char direction)
 		case 'A':
 		if (direction)
 		{
-			DDRA=0xFF;
+			setport(DDRA);
 		}
 		else
 		{
-			DDRA=0x00;
+			clearport(DDRA);
 		}
 		break;
 		case 'B':
 		if (direction)
 		{
-			DDRB=0xFF;
+			setport(DDRB);
 		}
 		else
 		{
-			DDRB=0x00;
+			clearport(DDRB);
 		}
 		break;
 		case 'C':
 		if (direction)
 		{
-			DDRC=0xFF;
+			setport(DDRC);
 		}
 		else
 		{
-			DDRC=0x00;
+			clearport(DDRC);
 		}
 		break;
 		case 'D':
 		if (direction)
 		{
-			DDRD=0xFF;
+			setport(DDRD);
 		}
 		else
 		{
-			DDRD=0x00;
+			clearport(DDRD);
 		}
 		break;
 		default:
