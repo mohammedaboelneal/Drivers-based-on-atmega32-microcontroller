@@ -153,19 +153,19 @@ void dio_pinwrite(unsigned char port,unsigned char pin,unsigned char value)
 }
 void dio_portwrite(unsigned char port,unsigned char value)
 {
-	swich(port)
+	switch(port)
 	{
 		case 'A':
-		setport(PORTA,value);
+		portval(PORTA,value);
 		break;
 		case 'B':
-		setport(PORTB,value);
+		portval(PORTB,value);
 		break;
 		case 'C':
-		setport(PORTC,value);
+		portval(PORTC,value);
 		break;
 		case 'D':
-		setport(PORTD,value);
+		portval(PORTD,value);
 		break;
 		default:
 		break;
@@ -193,7 +193,7 @@ void dio_pintoggle(unsigned char port,unsigned char pin)
 }
 void dio_porttoggle(unsigned char port)
 {
-	swich(port)
+	switch(port)
 	{
 		case'A':
 		toggleport(PORTA);
@@ -213,7 +213,7 @@ void dio_porttoggle(unsigned char port)
 }
 unsigned char dio_pinread(unsigned char port,unsigned char pin)
 {
-	unsigned char ret_value;
+	unsigned char ret_value=0;
 	switch(port)
 	{
 		case 'A':
@@ -235,8 +235,8 @@ unsigned char dio_pinread(unsigned char port,unsigned char pin)
 }
 unsigned char dio_portread(unsigned char port)
 {
-	unsigned char ret_value;
-	switch char(port)
+	unsigned char ret_value=0;
+	switch (port)
 	{
 		case 'A':
 		ret_value=PINA;
@@ -253,4 +253,5 @@ unsigned char dio_portread(unsigned char port)
 		default:
 		break;
 	}
+	return ret_value;
 }

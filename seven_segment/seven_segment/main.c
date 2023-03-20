@@ -5,20 +5,12 @@
  *  Author: Dell
  */ 
 
-#define F_CPU 8000000UL
-#include <util/delay.h>
 #include "seven_segment.h"
+#define test_enable
 
-void main(void)
+int main(void)
 {
-	sevensegment_setdirection('D');
-	unsigned char counter=0;
-	while(1)
-	{
-		for(unsigned char counter=0;counter<=9;counter++)
-		{
-			sevensegment_show('D',counter);
-			_delay_ms(1000);
-		}
-	}
+	#ifdef test_enable
+	test();
+	#endif
 }
