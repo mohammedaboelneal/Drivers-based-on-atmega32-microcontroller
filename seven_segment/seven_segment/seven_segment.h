@@ -9,8 +9,7 @@
 #ifndef SEVEN_SEGMENT_H_
 #define SEVEN_SEGMENT_H_
 
-
-
-
+void sevensegment_setdirection(unsigned char port);
+void sevensegment_show(unsigned char port,unsigned char numpattern);
 
 #endif /* SEVEN_SEGMENT_H_ */

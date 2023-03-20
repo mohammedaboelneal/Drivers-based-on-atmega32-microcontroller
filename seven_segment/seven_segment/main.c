@@ -5,11 +5,12 @@
  *  Author: Dell
  */ 
 
-#include <avr/io.h>
-void main(void)
+#include "seven_segment.h"
+#define test_enable
+
+int main(void)
 {
-	while(1)
-	{
-		
-	}
+	#ifdef test_enable
+	test();
+	#endif
 }
