@@ -5,13 +5,9 @@
  *  Author: Dell
  */ 
 
-
-#include <avr/io.h>
+#include "BCD_SevenSegments_decoder.h"
 
 int main(void)
 {
-    while(1)
-    {
-        //TODO:: Please write your application code 
-    }
+	test_case();
 }
